@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/workspace/notebooks
+      - ./data:/workspace/data
+      - ./src:/workspace/src
+      - ./tests:/workspace/tests
+      - ./results:/workspace/results

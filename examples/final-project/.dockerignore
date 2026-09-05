@@ -1,0 +1,15 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+.venv
+venv
+.env
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints
+results/*
+!results/.gitkeep
+tests/__pycache__
+README.md
+SUBMISSION.md

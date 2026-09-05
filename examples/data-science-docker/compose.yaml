@@ -1,0 +1,14 @@
+services:
+  jupyter:
+    build: .
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    volumes:
+      - ./notebooks:/workspace/notebooks
+      - ./data:/workspace/data
+      - ./src:/workspace/src
+      - ./results:/workspace/results
+    environment:
+      STUDENT_NAME: ${STUDENT_NAME:-anonymous}
+      DATA_DIR: /workspace/data
+      RESULTS_DIR: /workspace/results

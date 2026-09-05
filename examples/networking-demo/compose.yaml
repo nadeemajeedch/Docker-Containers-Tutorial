@@ -1,0 +1,18 @@
+services:
+  web:
+    image: python:3.12-slim
+    working_dir: /srv
+    volumes:
+      - ./site:/srv
+    command: ["python", "-m", "http.server", "8000"]
+    ports:
+      - "8000:8000"
+
+  client:
+    image: python:3.12-slim
+    depends_on:
+      - web
+    command:
+      - python
+      - -c
+      - "import urllib.request; r = urllib.request.urlopen('http://web:8000/index.html'); print(r.status); print(r.read().decode())"

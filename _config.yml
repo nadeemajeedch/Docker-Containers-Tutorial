@@ -1,0 +1,6 @@
+title: Docker and Containers Tutorial
+description: A complete beginner-to-expert Docker course. Part 1 covers images, containers, the CLI, and Docker Hub.
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

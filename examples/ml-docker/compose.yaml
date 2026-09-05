@@ -1,0 +1,20 @@
+services:
+  train:
+    build: .
+    volumes:
+      - ./data:/workspace/data
+      - ./src:/workspace/src
+      - ./models:/workspace/models
+    command: ["python", "src/train.py"]
+
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/workspace/notebooks
+      - ./data:/workspace/data
+      - ./src:/workspace/src
+      - ./models:/workspace/models
+    profiles:
+      - notebook
