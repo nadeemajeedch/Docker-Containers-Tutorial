@@ -345,6 +345,7 @@ Not in this course: Kubernetes, production public Jupyter, required GPUs.
 4. Type commands in your own terminal. Reading is not a substitute for running them.
 5. After Part 1, continue with [Lesson 9](lessons/09-running-python-with-docker.md). After Part 2, continue with [Lesson 18](lessons/18-docker-compose.md).
 
+Engr. Dr. Muhammad Nadeem Majeed, Professor, Department of Data Science, University of the Punjab, Lahore.
 GitHub renders every `.md` file. GitHub Pages can publish the same files as a course site.
 
 ---
