@@ -12,3 +12,7 @@ venv/
 .env
 !.env.example
 results/_local/
+
+# MkDocs site build output and local test environment
+site/
+.venv-pages-test/

@@ -1,0 +1,151 @@
+site_name: Docker Containers Tutorial
+site_description: >-
+  Learn Docker from the ground up, written for Python users — 31 hands-on
+  lessons, quick-reference cheatsheets, and complete working example projects.
+site_author: nadeem-majeedch
+site_url: https://nadeem-majeedch.github.io/Docker-Containers-Tutorial/
+
+# Project Pages site is served from /Docker-Containers-Tutorial/.
+# use_directory_urls: false keeps every generated URL a stable .html file so
+# relative links, CSS and JS resolve under the repo subpath. MkDocs' built-in
+# links plugin rewrites source-relative ./xx.md links to ./xx.html.
+use_directory_urls: false
+site_dir: site
+
+# MkDocs requires docs_dir to be a child of the config file's directory, so
+# docs/ is an empty conventional stub. The real content (README.md, lessons/,
+# cheatsheet/, examples/) is injected read-only from the repository root by
+# the hook below — no tutorial file is moved, renamed or rewritten.
+docs_dir: docs
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - toc.integrate
+  icon:
+    logo: material/cube
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+repo_url: https://github.com/nadeem-majeedch/Docker-Containers-Tutorial
+repo_name: Docker-Containers-Tutorial
+edit_uri: edit/main/
+
+copyright: Copyright &copy; 2026 nadeem-majeedch
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nadeem-majeedch/Docker-Containers-Tutorial
+      name: GitHub repository
+
+# Explicit navigation mirroring the repository's tutorial order. The hook
+# injects these files; every documentation page must be listed to keep
+# `mkdocs build --strict` free of warnings.
+nav:
+  - Home: README.md
+  - Lessons:
+      - Overview: lessons/README.md
+      - Lesson 01: lessons/01-introduction-to-docker.md
+      - Lesson 02: lessons/02-containers-vs-virtual-machines.md
+      - Lesson 03: lessons/03-docker-architecture.md
+      - Lesson 04: lessons/04-installing-docker.md
+      - Lesson 05: lessons/05-docker-cli.md
+      - Lesson 06: lessons/06-docker-images.md
+      - Lesson 07: lessons/07-docker-containers.md
+      - Lesson 08: lessons/08-docker-hub.md
+      - Lesson 09: lessons/09-running-python-with-docker.md
+      - Lesson 10: lessons/10-dockerfile.md
+      - Lesson 11: lessons/11-building-python-images.md
+      - Lesson 12: lessons/12-python-dependencies.md
+      - Lesson 13: lessons/13-dockerignore.md
+      - Lesson 14: lessons/14-volumes-and-bind-mounts.md
+      - Lesson 15: lessons/15-running-jupyter-with-docker.md
+      - Lesson 16: lessons/16-custom-jupyter-image.md
+      - Lesson 17: lessons/17-jupyter-project.md
+      - Lesson 18: lessons/18-docker-compose.md
+      - Lesson 19: lessons/19-python-jupyter-compose.md
+      - Lesson 20: lessons/20-environment-variables.md
+      - Lesson 21: lessons/21-docker-networking.md
+      - Lesson 22: lessons/22-docker-for-data-science.md
+      - Lesson 23: lessons/23-docker-for-machine-learning.md
+      - Lesson 24: lessons/24-debugging.md
+      - Lesson 25: lessons/25-best-practices.md
+      - Lesson 26: lessons/26-security.md
+      - Lesson 27: lessons/27-advanced-docker.md
+      - Lesson 28: lessons/28-image-optimization.md
+      - Lesson 29: lessons/29-docker-and-github.md
+      - Lesson 30: lessons/30-reproducible-academic-projects.md
+      - Lesson 31: lessons/31-final-project.md
+      - Part 2 Preview: lessons/part-2-preview.md
+  - Cheatsheets:
+      - Complete cheatsheet: cheatsheet.md
+      - Full reference: cheatsheet/complete-docker-cheatsheet.md
+      - Dockerfile: cheatsheet/dockerfile.md
+      - Docker Compose: cheatsheet/docker-compose.md
+      - Python: cheatsheet/python-docker.md
+      - Jupyter: cheatsheet/jupyter-docker.md
+      - Networking: cheatsheet/networking.md
+      - Best practices: cheatsheet/best-practices.md
+      - Troubleshooting: cheatsheet/troubleshooting.md
+  - Examples:
+      - Overview: examples/README.md
+      - Hello Python: examples/hello-python/README.md
+      - Python Docker Project: examples/python-docker-project/README.md
+      - Jupyter Project: examples/jupyter-project/README.md
+      - Jupyter notebooks: examples/jupyter-project/notebooks/welcome.md
+      - Compose + Jupyter: examples/compose-jupyter/README.md
+      - Compose notebooks: examples/compose-jupyter/notebooks/welcome.md
+      - ML Docker: examples/ml-docker/README.md
+      - Data Science Docker: examples/data-science-docker/README.md
+      - Networking Demo: examples/networking-demo/README.md
+      - GitHub Template: examples/github-template/README.md
+      - Final Project: examples/final-project/README.md
+      - Final Project submission: examples/final-project/SUBMISSION.md

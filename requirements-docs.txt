@@ -1,0 +1,4 @@
+# Documentation build dependencies for the GitHub Pages site.
+# Installed by .github/workflows/pages.yml — tutorial content is untouched.
+mkdocs==1.6.1
+mkdocs-material==9.7.7
